@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Airplane Fighter</title>
+  </head>
+  <body>
+    <h1>Airplane Fighter</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn-success" id="start" onclick="startGame()">START</button>
+                <button class="btn-danger" id="resetGameButton" disabled>RESTART</button>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Gameplay Instructions
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Move Up : ⬆️</a></li>
+                      <li><a class="dropdown-item" href="#">Move Down : ⬇️</a></li>
+                      <li><a class="dropdown-item" href="#">Move Left : ⬅️</a></li>
+                      <li><a class="dropdown-item" href="#">Move Right : ➡️</a></li>
+                      <li><a class="dropdown-item" href="#">Shoot : Spacebar ➖</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <canvas height="600" width="500" id="canvas"></canvas>
+                <img src="images/airplane.png" class="img-fluid rounded-top d-none" alt="" id="airplane">
+                <img src="images/meteor.png" class="img-fluid rounded-top d-none" alt="" id="meteors">
+                <img src="images/background.jpg" class="img-fluid rounded-top d-none" alt="" id="backgroundImage">
+                <img src="images/missile.png" class="img-fluid rounded-top d-none" alt="" id="missile">
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
