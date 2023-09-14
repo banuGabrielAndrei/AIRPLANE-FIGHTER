@@ -18,3 +18,23 @@
     border-radius: 15px;
     margin-bottom: 10px;
 }
+
+#scoreBoard {
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 200px;
+}
+
+body {
+    background-image: url("images/body.jpg");
+    background-size: auto;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: antiquewhite;
+}
+
+#score {
+    color: antiquewhite;
+}

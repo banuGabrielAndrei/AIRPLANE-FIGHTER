@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-3">
                 <button class="btn-success" id="start" onclick="startGame()">START</button>
-                <button class="btn-danger" id="resetGameButton" disabled>RESTART</button>
+                <button class="btn-danger" id="resetGameButton" onclick="restartGame()" disabled >RESTART</button>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                       Gameplay Instructions
@@ -26,13 +26,16 @@
                       <li><a class="dropdown-item" href="#">Shoot : Spacebar ➖</a></li>
                     </ul>
                 </div>
+                <div class="row">
+                  <p class="text-center" id="scoreBoard"><h2 id="score"></h2> </p>
+                </div>
             </div>
             <div class="col-md-9">
                 <canvas height="600" width="500" id="canvas"></canvas>
-                <img src="images/airplane.png" class="img-fluid rounded-top d-none" alt="" id="airplane">
-                <img src="images/meteor.png" class="img-fluid rounded-top d-none" alt="" id="meteors">
-                <img src="images/background.jpg" class="img-fluid rounded-top d-none" alt="" id="backgroundImage">
-                <img src="images/missile.png" class="img-fluid rounded-top d-none" alt="" id="missile">
+                <img src="images/airplane.png" class="img-fluid d-none" alt="" id="airplane">
+                <img src="images/meteor.png" class="img-fluid d-none" alt="" id="meteors">
+                <img src="images/background.jpg" class="img-fluid d-none" alt="" id="backgroundImage">
+                <img src="images/missile.png" class="img-fluid d-none" alt="" id="missile">
             </div>
         </div>
     </div>
