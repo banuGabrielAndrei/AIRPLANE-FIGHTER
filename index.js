@@ -52,6 +52,28 @@ function moveRight() {
     airplane.directionX = airplane.speed;
 }
 
+function keyDown(e) {
+    if (e.key == "ArrowUp") {
+        moveUp();
+    } else if (e.key == "ArrowDown") {
+        moveDown();
+    } else if (e.key == "ArrowLeft") {
+        moveLeft();
+    } else if (e.key == "ArrowRight") {
+        moveRight();
+    } else if (e.key == " ") {
+        shootMissile();
+    }
+}
+
+function keyUp(e) {
+    if (e.key == "ArrowUp" || e.key == "ArrowDown") {
+        airplane.directionY = 0;
+    } else if (e.key == "ArrowLeft" || e.key == "ArrowRight") {
+        airplane.directionX = 0;
+    }
+}
+
 function edgesDetection() {
     if (airplane.airplaneX < 0) {
         airplane.airplaneX = 0;
@@ -165,28 +187,6 @@ function checkHitTargets() {
                 }
             }
         }
-    }
-}
-
-function keyDown(e) {
-    if (e.key == "ArrowUp") {
-        moveUp();
-    } else if (e.key == "ArrowDown") {
-        moveDown();
-    } else if (e.key == "ArrowLeft") {
-        moveLeft();
-    } else if (e.key == "ArrowRight") {
-        moveRight();
-    } else if (e.key == " ") {
-        shootMissile();
-    }
-}
-
-function keyUp(e) {
-    if (e.key == "ArrowUp" || e.key == "ArrowDown") {
-        airplane.directionY = 0;
-    } else if (e.key == "ArrowLeft" || e.key == "ArrowRight") {
-        airplane.directionX = 0;
     }
 }
 
