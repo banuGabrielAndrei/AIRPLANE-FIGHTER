@@ -78,7 +78,7 @@ class Meteor {
         ctx.drawImage(meteorsImage, this.meteorX, this.meteorY, this.meteorWidth, this.meteorHeight);
     }
 
-    upadateMeteor() {
+    updateMeteor() {
         this.meteorY += this.speed;
     }
 }
@@ -195,7 +195,7 @@ function drawGame() {
     airplane.drawAirplane();
     if (gamePlay) {
         for (let i = 0; i < meteors.length; ++i) {
-            meteors[i].upadateMeteor();
+            meteors[i].updateMeteor();
             meteors[i].drawMeteor();
         }
         for (let j = 0; j < missiles.length; ++j) {
